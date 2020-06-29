@@ -7,7 +7,7 @@ class PhotoListPhoto extends Component {
     return (
       <div key={this.props.index} className="column is-one-third">
         <div class="card">
-            <div class="card-body">
+            <div class="card-body d-flex flex-column align-items-center">
                 <Link
                   to={`/${this.props.theNameOfTheCategoryWeWantToLookAt}/${this.props.index}`}
                 >
