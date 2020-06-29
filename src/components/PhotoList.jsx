@@ -12,6 +12,7 @@ class PhotoListPhoto extends Component {
                   to={`/${this.props.theNameOfTheCategoryWeWantToLookAt}/${this.props.index}`}
                 >
                   <img
+                  class="card-img-top"
                     src={this.props.photo.imageURL}
                     alt={this.props.photo.title}
                   />
