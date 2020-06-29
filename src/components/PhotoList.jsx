@@ -1,6 +1,37 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import SampleData from '../sample-data.json'
+
+class PhotoListPhoto extends Component {
+  render() {
+    return (
+      <div key={this.props.index} className="column is-one-third">
+        <div class="card">
+            <div class="card-body">
+                <Link
+                  to={`/${this.props.theNameOfTheCategoryWeWantToLookAt}/${this.props.index}`}
+                >
+                  <img
+                    src={this.props.photo.imageURL}
+                    alt={this.props.photo.title}
+                  />
+                </Link>
+                <figcaption>
+                  <Link
+                    to={`/${this.props.theNameOfTheCategoryWeWantToLookAt}/${this.props.index}`}
+                  >
+                    {this.props.photo.title}
+                  </Link>
+                </figcaption>
+
+            <div className="content" />
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
 export class PhotoList extends Component {
   render() {
 
@@ -24,19 +55,22 @@ export class PhotoList extends Component {
                 </ol>
               </nav>
             </section>
-        <h5 className="title">{category.title}</h5>
-        <p class="text">{category.description}</p>
+           
+            <h3 className="title">{category.title}</h3>
+        <h4 className="subtitle">{category.description}</h4>
         <section className="cards d-flex flex-row justify-content-center flex-wrap">
-          {categoryPhotos.map(photo, index => (
-             <Link to={`/${this.props.categoryType}/${photo.id}`}>
-            <div class="card">
-              <div class="card-body">
-                <img src={photo.imageURL} class="card-img-top" alt="..." />
-                <p class="card-text">{photo.title}</p>
-              </div>
-            </div>
-            </Link>
+        <div className="columns is-multiline">
+          {categoryPhotos.map((photo, index) => (
+            <PhotoListPhoto
+              key={index}
+              index={index}
+              photo={photo}
+              theNameOfTheCategoryWeWantToLookAt={
+                theNameOfTheCategoryWeWantToLookAt
+              }
+            />
           ))}
+        </div>
         </section>
       </div>
     )
