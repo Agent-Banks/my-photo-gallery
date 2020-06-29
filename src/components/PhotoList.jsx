@@ -24,8 +24,6 @@ class PhotoListPhoto extends Component {
                     {this.props.photo.title}
                   </Link>
                 </figcaption>
-
-            <div className="content" />
           </div>
         </div>
       </div>
@@ -61,10 +59,9 @@ export class PhotoList extends Component {
         </nav>
             </section>
            
-            <h3 className="title">{category.title}</h3>
-        <h4 className="subtitle">{category.description}</h4>
+            <h3 className="title pl-4">{category.title}</h3>
+        <h4 className="subtitle pl-5">{category.description}</h4>
         <section className="cards d-flex flex-row justify-content-center flex-wrap">
-        <div className="columns is-multiline">
           {categoryPhotos.map((photo, index) => (
             <PhotoListPhoto
               key={index}
@@ -75,7 +72,6 @@ export class PhotoList extends Component {
               }
             />
           ))}
-        </div>
         </section>
       </div>
     )

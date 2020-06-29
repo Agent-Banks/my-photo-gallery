@@ -4,13 +4,12 @@ export default class Header extends Component {
   render() {
     return (
       <header className="jumbotron jumbotron-fluid">
-        <div class="container">
+        <div className="container">
           <Link to="/">
-            <h1 class="display-4">Fluid jumbotron</h1>{' '}
+            <h1 className="display-4">Things I Enjoy</h1>{' '}
           </Link>
           <p class="lead">
-            This is a modified jumbotron that occupies the entire horizontal
-            space of its parent.
+            These are the things that I enjoy
           </p>
         </div>
       </header>
