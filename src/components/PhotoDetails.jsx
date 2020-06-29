@@ -17,7 +17,7 @@ export class PhotoDetails extends Component {
   const photo = categoryPhotos[arrayIndexOfThePhoto]
 
   return (
-    <div className="container">
+    <div>
       <section>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
@@ -41,6 +41,7 @@ export class PhotoDetails extends Component {
           </ol>
         </nav>
       </section>
+    <div className="container">
       <h3 className="title">{photo.title}</h3>
       <figure className="image">
         <img src={photo.imageURL} alt={photo.title} />
@@ -48,6 +49,7 @@ export class PhotoDetails extends Component {
       <p className="is-small">
         <a href={photo.sourceURL}>Source</a>
       </p>
+    </div>
     </div>
   )
 }
