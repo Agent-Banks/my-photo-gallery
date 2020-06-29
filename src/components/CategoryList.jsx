@@ -17,14 +17,16 @@ export default class CategoryList extends Component {
     return (
       <div>
         <section>
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item">
-                    <a href="#">Home</a>
-                  </li>
-                </ol>
-              </nav>
-            </section>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <Link class="breadcrumb-item" to="/">
+                Home
+              </Link>
+            </li>
+          </ol>
+        </nav>
+        </section>
         <section className="cards d-flex flex-row justify-content-center flex-wrap">
           <div class="card">
             <div class="card-body">
