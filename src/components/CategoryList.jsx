@@ -2,18 +2,37 @@ import React, { Component } from 'react'
 import SampleData from '../sample-data.json'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 
+
+class Category extends Component {
+  render() {
+    return (
+      <div className="column">
+        <div className="card">
+          <div className="card-content">
+            <div className="content">
+              <h2>
+                <Link to={`/${this.props.categoryName}`}>
+                  {this.props.title}
+                </Link>
+              </h2>
+              <p>{this.props.description}</p>
+            </div>
+          </div>
+          <div className="card-image">
+            <figure className="image">
+              <img src={this.props.imageURL} alt={this.props.title} />
+            </figure>
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
 export default class CategoryList extends Component {
   render() {
-    const pandaCategoryTitle = SampleData.pandas.title
-    const pandaCategoryText = SampleData.pandas.description
-    const firstPandaImage = SampleData.pandas.photos.find(
-      (photo, index) => index === 0
-    )
-    const miniaturesCategoryTitle = SampleData.miniatures.title
-    const miniaturesCategoryText = SampleData.miniatures.description
-    const firstMiniatureImage = SampleData.miniatures.photos.find(
-      (photo, index) => index === 0
-    )
+    const categoryNames = Object.keys(SampleData)
+
     return (
       <div>
         <section>
@@ -28,34 +47,22 @@ export default class CategoryList extends Component {
         </nav>
         </section>
         <section className="cards d-flex flex-row justify-content-center flex-wrap">
-          <div class="card">
-            <div class="card-body">
-              <Link to="/pandas">
-                <h5 class="card-title">{pandaCategoryTitle}</h5>{' '}
-              </Link>
-              <p class="card-text">{pandaCategoryText}</p>
-              <img
-                src={firstPandaImage.imageURL}
-                class="card-img-top"
-                alt="..."
+        <div className="columns is-mobile">
+          {categoryNames.map((categoryName, index) => {
+            const categoryDetails = SampleData[categoryName]
+            const firstPhoto = categoryDetails.photos[0]
+
+            return (
+              <Category
+                key={index}
+                categoryName={categoryName}
+                title={categoryDetails.title}
+                description={categoryDetails.description}
+                imageURL={firstPhoto.imageURL}
               />
-            </div>
-          </div>
-        </section>
-        <section className="cards d-flex flex-row justify-content-center flex-wrap">
-          <div class="card">
-            <div class="card-body">
-              <Link to="/miniatures">
-                <h5 class="card-title">{miniaturesCategoryTitle}</h5>
-              </Link>
-              <p class="card-text">{miniaturesCategoryText}</p>
-              <img
-                src={firstMiniatureImage.imageURL}
-                class="card-img-top"
-                alt="..."
-              />
-            </div>
-          </div>
+            )
+          })}
+        </div>
         </section>
       </div>
     )
