@@ -42,7 +42,7 @@ export class PhotoList extends Component {
 
     return (
       <div>
-        <section>
+        <section className="d-flex justify-content-center">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-light">
             <li class="breadcrumb-item">

@@ -18,7 +18,7 @@ export class PhotoDetails extends Component {
 
   return (
     <div>
-      <section>
+      <section className="d-flex justify-content-center">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-light">
             <li class="breadcrumb-item">
@@ -41,7 +41,7 @@ export class PhotoDetails extends Component {
           </ol>
         </nav>
       </section>
-    <div className="container">
+    <div className="container d-flex flex-column align-items-center">
       <h3 className="title">{photo.title}</h3>
       <figure className="image">
         <img src={photo.imageURL} alt={photo.title} />
