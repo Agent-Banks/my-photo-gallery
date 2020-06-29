@@ -4,7 +4,7 @@ export default class Header extends Component {
   render() {
     return (
       <header className="jumbotron jumbotron-fluid">
-        <div className="container">
+        <div className="container d-flex flex-column align-items-center">
           <Link to="/">
             <h1 className="display-4">Things I Enjoy</h1>{' '}
           </Link>
