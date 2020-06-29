@@ -44,7 +44,7 @@ export class PhotoList extends Component {
       <div>
         <section>
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
+          <ol class="breadcrumb bg-light">
             <li class="breadcrumb-item">
               <Link to="/">
                 Home

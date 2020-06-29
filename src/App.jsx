@@ -10,12 +10,10 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <body>
+        <body className="bg-light">
           <Header />
           <main>
-            <Route exact path="/">
-              <CategoryList />
-            </Route>
+            <Route exact path="/" component={CategoryList}/>
             <Route
                 exact
                 path="/:theNameOfTheCategoryWeWantToLookAt"

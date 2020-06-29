@@ -10,7 +10,7 @@ class Category extends Component {
           <h2>
             <Link to={`/${this.props.categoryName}`}>{this.props.title}</Link>
           </h2>
-          <p>{this.props.description}</p>
+          <p className="text">{this.props.description}</p>
         </div>
         <img
           class="card-img-top"
@@ -30,7 +30,7 @@ export default class CategoryList extends Component {
       <div>
         <section>
           <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
+            <ol class="breadcrumb bg-light">
               <li class="breadcrumb-item">
                 <Link class="breadcrumb-item" to="/">
                   Home
