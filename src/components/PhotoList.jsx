@@ -45,16 +45,20 @@ export class PhotoList extends Component {
     return (
       <div>
         <section>
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item">
-                    <a href="#">Home</a>
-                  </li>
-                  <li class="breadcrumb-item active" aria-current="page">
-                  {this.props.title}
-                  </li>
-                </ol>
-              </nav>
+        <nav className="breadcrumb" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <Link to="/">
+                Home
+              </Link>
+            </li>
+            <li class="breadcrumb-item">
+              <Link to={`/${theNameOfTheCategoryWeWantToLookAt}`}>
+                {category.title}
+              </Link>
+            </li>
+          </ol>
+        </nav>
             </section>
            
             <h3 className="title">{category.title}</h3>

@@ -10,10 +10,6 @@ export class PhotoDetails extends Component {
 
   const arrayIndexOfThePhoto = this.props.match.params.arrayIndexOfThePhoto
 
-  console.log(
-    `I would love to see the photo with index ${arrayIndexOfThePhoto} from the category ${theNameOfTheCategoryWeWantToLookAt}`
-  )
-
   const category = SampleData[theNameOfTheCategoryWeWantToLookAt]
 
   const categoryPhotos = category.photos
