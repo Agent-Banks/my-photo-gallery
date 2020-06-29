@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import Header from './components/Header'
 import SampleData from './sample-data.json'
 import CategoryList from './components/CategoryList'
-import { PhotoList } from './PhotoList'
-import { PhotoDetails } from './PhotoDetails'
+import { PhotoList } from './components/PhotoList'
+import { PhotoDetails } from './components/PhotoDetails'
 
 class App extends Component {
   render() {
@@ -51,8 +51,8 @@ class App extends Component {
             <Route exact path="/">
               <CategoryList />
             </Route>
-            <Route exact path="/pandas">{pandasToRender}</Route>
-            <Route exact path="/miniatures">{miniaturesToRender}</Route>
+            <Route exact path="/:categoryType">{pandasToRender}</Route>
+            <Route exact path="/:categoryType">{miniaturesToRender}</Route>
             <Route
               exact
               path={'/:categoryType/:id'}

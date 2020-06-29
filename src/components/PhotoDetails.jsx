@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SampleData from './sample-data.json'
+import SampleData from '../sample-data.json'
 
 
 export class PhotoDetails extends Component {
