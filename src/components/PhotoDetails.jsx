@@ -44,7 +44,7 @@ export class PhotoDetails extends Component {
     <div className="container d-flex flex-column align-items-center">
       <h3 className="title">{photo.title}</h3>
       <figure className="image">
-        <img src={photo.imageURL} alt={photo.title} />
+        <img src={photo.imageURL} alt={photo.title} width="1000" />
       </figure>
       <p className="is-small">
         <a href={photo.sourceURL}>Source</a>
