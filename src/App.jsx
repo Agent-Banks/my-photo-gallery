@@ -8,26 +8,6 @@ import { PhotoDetails } from './components/PhotoDetails'
 
 class App extends Component {
   render() {
-    // const pandasToRender = (
-    //   <PhotoList
-    //     title={SampleData.pandas.title}
-    //     description={SampleData.pandas.description}
-    //     photos={SampleData.pandas.photos}
-    //     categoryType="pandas"
-    //     key="pandas"
-    //   />
-    // )
-
-    // const miniaturesToRender = (
-    //   <PhotoList
-    //     title={SampleData.miniatures.title}
-    //     description={SampleData.miniatures.description}
-    //     photos={SampleData.miniatures.photos}
-    //     categoryType="miniatures"
-    //     key="miniatures"
-    //   />
-    // )
-
     return (
       <Router>
         <body>
@@ -45,13 +25,6 @@ class App extends Component {
                 path="/:theNameOfTheCategoryWeWantToLookAt/:arrayIndexOfThePhoto"
                 component={PhotoDetails}
               />
-            {/* <Route exact path="/pandas">{pandasToRender}</Route>
-            <Route exact path="/miniatures">{miniaturesToRender}</Route> */}
-            {/* <Route
-              exact
-              path={'/:categoryType/:id'}
-              component={PhotoDetails}
-            ></Route> */}
           </main>
         </body>
       </Router>

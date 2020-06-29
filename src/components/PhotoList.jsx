@@ -45,15 +45,15 @@ export class PhotoList extends Component {
     return (
       <div>
         <section>
-        <nav className="breadcrumb" aria-label="breadcrumb">
+        <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
               <Link to="/">
                 Home
               </Link>
             </li>
-            <li class="breadcrumb-item">
-              <Link to={`/${theNameOfTheCategoryWeWantToLookAt}`}>
+            <li class="breadcrumb-item active" aria-current="page">
+              <Link  class="breadcrumb-item active" aria-current="page" to={`/${theNameOfTheCategoryWeWantToLookAt}`}>
                 {category.title}
               </Link>
             </li>
