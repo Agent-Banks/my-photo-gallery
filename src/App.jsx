@@ -1,36 +1,65 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
-import Page from './pages/Page'
-import Page2 from './pages/Page2'
-import HomePage from './pages/HomePage'
-import NotFound from './pages/NotFound'
+import Header from './components/Header'
+import SampleData from './sample-data.json'
+import CategoryList from './components/CategoryList'
+import { PhotoList } from './PhotoList'
+import { PhotoDetails } from './PhotoDetails'
 
 class App extends Component {
   render() {
+    const pandasToRender = (
+      <PhotoList
+        title={SampleData.pandas.title}
+        description={SampleData.pandas.description}
+        photos={SampleData.pandas.photos}
+        categoryType="pandas"
+        key="pandas"
+      />
+    )
+
+    const miniaturesToRender = (
+      <PhotoList
+        title={SampleData.miniatures.title}
+        description={SampleData.miniatures.description}
+        photos={SampleData.miniatures.photos}
+        categoryType="pandas"
+        key="pandas"
+      />
+    )
+
     return (
       <Router>
-        <header>
-          <h1>Welcome to my SPA</h1>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Go Home</Link>
-              </li>
-              <li>
-                <Link to="/1">Page 1</Link>
-              </li>
-              <li>
-                <Link to="/2">Page 2</Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
-        <Switch>
-          <Route exact path="/" component={HomePage}></Route>
-          <Route exact path="/1" component={Page}></Route>
-          <Route exact path="/2" component={Page2}></Route>
-          <Route path="*" component={NotFound}></Route>
-        </Switch>
+        <body>
+          <Header />
+          <main>
+            <section>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="#">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="#">Library</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Data
+                  </li>
+                </ol>
+              </nav>
+            </section>
+            <Route exact path="/">
+              <CategoryList />
+            </Route>
+            <Route exact path="/pandas">{pandasToRender}</Route>
+            <Route exact path="/miniatures">{miniaturesToRender}</Route>
+            <Route
+              exact
+              path={'/:categoryType/:id'}
+              component={PhotoDetails}
+            ></Route>
+          </main>
+        </body>
       </Router>
     )
   }

@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "photo-gallery",
+  "name": "test",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -30,9 +30,7 @@
     "stylelint-config-standard": "^20.0.0"
   },
   "dependencies": {
-    "bootstrap": "^4.5.0",
     "json": "^9.0.6",
-    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
