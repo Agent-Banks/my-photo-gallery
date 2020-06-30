@@ -29,27 +29,27 @@
       }
     ]
   },
-  "miniatures": {
-    "title": "Miniature Painting",
-    "description": "I enjoy painting miniatures from board games. I've been painting since early 2018, here's some of my work.",
+  "French Bulldogs": {
+    "title": "French Bulldogs",
+    "description": "French Bulldogs are stocky compact dogs with a friendly mild-mannered temperament",
     "photos": [
       {
         
-        "title": "City of Kings",
-        "imageURL": "https://things-i-like.netlify.com/images/city_of_kings.jpg",
-        "sourceURL": "https://www.instagram.com/p/Btv-0uYH8Xc"
+        "title": "Brown Frenchie",
+        "imageURL": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/02/13/12/french-bulldog.jpg?w968h681",
+        "sourceURL": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/02/13/12/french-bulldog.jpg?w968h681"
       },
       {
         
-        "title": "Blood Rage, Ram Clan",
-        "imageURL": "https://things-i-like.netlify.com/images/ram_clan.jpg",
-        "sourceURL": "https://www.instagram.com/p/BjRKLqYh4gK"
+        "title": "Grey Frenchie",
+        "imageURL": "https://www.petplace.com/static/60a6fdd3d60ae7cb347b5730b2d6fa97/5f007/shutterstock_477341884.jpg",
+        "sourceURL": "https://www.petplace.com/static/60a6fdd3d60ae7cb347b5730b2d6fa97/5f007/shutterstock_477341884.jpg"
       },
       {
         
-        "title": "Cormac the Druid, work in progress",
-        "imageURL": "https://things-i-like.netlify.com/images/cormac.jpg",
-        "sourceURL": "https://www.instagram.com/p/BnW2QrWDaky"
+        "title": "White tired Frenchie",
+        "imageURL": "https://thehappypuppysite.com/wp-content/uploads/2019/03/White-French-Bulldog-long-1.jpg",
+        "sourceURL": "https://thehappypuppysite.com/wp-content/uploads/2019/03/White-French-Bulldog-long-1.jpg"
       }
     ]
   }

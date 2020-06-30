@@ -30,9 +30,9 @@ export default class CategoryList extends Component {
       <div>
         <section className="d-flex justify-content-center">
           <nav aria-label="breadcrumb">
-            <ol class="breadcrumb bg-light">
-              <li class="breadcrumb-item">
-                <Link class="breadcrumb-item" to="/">
+            <ol className="breadcrumb bg-light">
+              <li className="breadcrumb-item">
+                <Link className="breadcrumb-item" to="/">
                   Home
                 </Link>
               </li>

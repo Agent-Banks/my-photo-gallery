@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SampleData from '../sample-data.json'
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Link } from 'react-router-dom'
 
 
 export class PhotoDetails extends Component {

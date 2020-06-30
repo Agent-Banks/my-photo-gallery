@@ -10,9 +10,19 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  background-color:  #fff8f9fa;
 }
 
 .card {
   margin: 1rem;
   width: 30rem;
+}
+
+header{
+  background-image: linear-gradient( blue, rgb(40, 138, 250), #fff8f9fa);
+  color: rgb(255, 255, 255)
+}
+
+.headerTitle{
+  color: rgb(255, 255, 255);
 }

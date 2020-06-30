@@ -5,7 +5,7 @@ import SampleData from '../sample-data.json'
 class PhotoListPhoto extends Component {
   render() {
     return (
-      <div key={this.props.index} className="column is-one-third">
+      <div key={this.props.index} className="column is-one-third"> 
         <div class="card">
             <div class="card-body d-flex flex-column align-items-center">
                 <Link
