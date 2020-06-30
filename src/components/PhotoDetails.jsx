@@ -41,8 +41,8 @@ export class PhotoDetails extends Component {
           </ol>
         </nav>
       </section>
-    <div className="container d-flex flex-column align-items-center">
-      <h3 className="title">{photo.title}</h3>
+    <div className="singleImage container d-flex flex-column align-items-center">
+      <h3 className="title p-3"><strong>{photo.title}</strong></h3>
       <figure className="image">
         <img src={photo.imageURL} alt={photo.title} width="1000" />
       </figure>
