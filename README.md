@@ -1,4 +1,4 @@
-# SDG Assignemnt 27 : 07 - 04 - React Router Photo Gallery
+# SDG Assignemnt 27 : React Router Photo Gallery
 
 Built a small photo gallery site to understand React Router
 
@@ -7,7 +7,7 @@ Built a small photo gallery site to understand React Router
 ## Technologies used:
 HTML, CSS, JavaScript, React, React Components, & React Router
 
-### Requirements 
+### Requirements: 
 - App needs at least 4 components: `App`, `CategoryList`, `PhotoList`, `PhotoDetail`.
 - On the home page,the category list should render the title of each category and link using the key.
 - Render each photo in the given category on the photo list page with a thumbnail-sized version of the photos.
